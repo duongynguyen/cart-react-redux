@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import ProductItem from './ProductItem';
-import { connect } from 'react-redux';
 
 class Products extends Component {
   render() {
-    let {products} = this.props;
+    let { products } = this.props;
     return (
       <section className="section">
         <h1 className="section-heading">Danh Sách Sản Phẩm</h1>
         <div className="row">
-          { this.showProducts(products) }
+          {this.showProducts(products)}
         </div>
       </section>
     );
@@ -26,8 +25,4 @@ class Products extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  products: state.product
-})
-
-export default connect(mapStateToProps, null)(Products);
+export default (Products);

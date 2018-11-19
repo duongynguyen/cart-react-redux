@@ -13,6 +13,18 @@ const initialState = [
       rating: 4
     },
     quantity: 5
+  },
+  {
+    product: {
+      id: 2,
+      name: 'Galaxy Note 9',
+      image: 'https://i5.walmartimages.com/asr/979de7d5-ee91-44cb-9915-4852dde90948_1.adbd8f04fbaa5e88cf42f4933aae0437.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF',
+      description: 'Sản phẩm do SamSung sản xuất',
+      price: 350,
+      inventory: 2,
+      rating: 3
+    },
+    quantity: 3
   }
 ]
 

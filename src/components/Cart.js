@@ -21,7 +21,6 @@ class Cart extends Component {
             </thead>
             <tbody>
               {children}
-              <CartResult />
             </tbody>
           </table>
         </div>

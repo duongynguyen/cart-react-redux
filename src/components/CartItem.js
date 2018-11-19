@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class CartItem extends Component {
   render() {
@@ -7,7 +7,11 @@ class CartItem extends Component {
     return (
       <tr>
         <th scope="row">
-          <img src={item.product.image} alt={item.product.name} className="img-fluid z-depth-0" />
+          <img
+            src={item.product.image}
+            alt={item.product.name}
+            className="img-fluid z-depth-0"
+          />
         </th>
         <td>
           <h5>
@@ -28,8 +32,14 @@ class CartItem extends Component {
         </td>
         <td>{this.showSumTotal(item.product.price, item.quantity)}$</td>
         <td>
-          <button type="button" className="btn btn-sm btn-primary waves-effect waves-light" data-toggle="tooltip" data-placement="top"
-            title="" data-original-title="Remove item">
+          <button
+            type="button"
+            className="btn btn-sm btn-primary waves-effect waves-light"
+            data-toggle="tooltip"
+            data-placement="top"
+            title=""
+            data-original-title="Remove item"
+          >
             X
           </button>
         </td>
@@ -39,7 +49,7 @@ class CartItem extends Component {
 
   showSumTotal = (price, quantity) => {
     return price * quantity;
-  }
+  };
 }
 
 export default CartItem;

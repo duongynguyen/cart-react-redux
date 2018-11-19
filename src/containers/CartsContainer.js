@@ -4,12 +4,26 @@ import PropTypes from "prop-types";
 import Cart from "../components/Cart";
 import CartItem from "../components/CartItem";
 import * as Message from "../constants/Messages";
+import CartResult from "../components/CartResult";
 
 class CartsContainer extends Component {
   render() {
     let { carts } = this.props;
-    return <Cart>{this.showCartItem(carts)}</Cart>;
+    return (
+      <Cart>
+        {this.showCartItem(carts)}
+        {this.showSumTotal(carts)}
+      </Cart>
+    );
   }
+
+  showSumTotal = arr => {
+    var result = null;
+    if (arr.length > 0) {
+      return <CartResult cart={arr} />;
+    }
+    return result;
+  };
 
   showCartItem = arr => {
     var result = Message.MSG_CART_EMPTY;

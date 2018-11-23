@@ -1,39 +1,33 @@
-import * as types from '../constants/ActionType';
+import * as Types from '../constants/ActionType';
 
-const data = JSON.parse(localStorage.getItem('CART'));
-const initialState = [
-  {
-    product: {
-      id: 1,
-      name: 'Iphone XS Max',
-      image: 'https://techland.com.vn/asset/upload/san_pham/iphone/iphone-xs-xsmax-xr/xs-max/iphone-xs-max-gold.jpg',
-      description: 'Sản phẩm do Apple sản xuất',
-      price: 500,
-      inventory: 10,
-      rating: 4
-    },
-    quantity: 5
-  },
-  {
-    product: {
-      id: 2,
-      name: 'Galaxy Note 9',
-      image: 'https://i5.walmartimages.com/asr/979de7d5-ee91-44cb-9915-4852dde90948_1.adbd8f04fbaa5e88cf42f4933aae0437.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF',
-      description: 'Sản phẩm do SamSung sản xuất',
-      price: 350,
-      inventory: 2,
-      rating: 3
-    },
-    quantity: 3
-  }
-]
+var data = JSON.parse(localStorage.getItem('CART'));
+var initialState = data ? data : [];
 
 export default (state = initialState, action) => {
+  let { product, quantity } = action;
+  let index = -1;
   switch (action.type) {
-    case types.ADD_TO_CART:
-      console.log(action);
+    case Types.ADD_TO_CART:
+      index = findProductInCart(state, product);
+      if (index !== -1) {
+        state[index].quantity += quantity;
+      } else {
+        state.push({ product, quantity });
+      }
+     localStorage.setItem('CART', JSON.stringify(state));
       return [...state];
     default:
       return state
   }
+}
+
+const findProductInCart = (arr, product) => {
+  let index = -1;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].product.id === product.id) {
+      index = i;
+      break;
+    }
+  }
+  return index;
 }

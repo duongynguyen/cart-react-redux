@@ -26,7 +26,7 @@ class CartsContainer extends Component {
   };
 
   showCartItem = arr => {
-    var result = Message.MSG_CART_EMPTY;
+    var result = <tr><td>{Message.MSG_CART_EMPTY}</td></tr>;
     if (arr.length > 0) {
       result = arr.map((item, index) => {
         return <CartItem key={index} index={index} item={item} />;

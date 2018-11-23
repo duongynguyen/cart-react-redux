@@ -1,9 +1,16 @@
-import * as types from "../constants/ActionType";
+import * as Types from "../constants/ActionType";
 
 export const acAddToCart = (product, quantity) => {
   return {
-    type: types.ADD_TO_CART,
+    type: Types.ADD_TO_CART,
     product,
     quantity
+  }
+}
+
+export const acChangeMessage = (message) => {
+  return {
+    type: Types.CHANGE_MESSAGE,
+    message
   }
 }

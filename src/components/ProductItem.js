@@ -1,14 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class ProductItem extends Component {
+  showRatings = rating => {
+    let result = [];
+    for (let i = 0; i < rating; i++) {
+      result.push(<i className="fa fa-star" key={i}></i>);
+    }
+    for (let i = 0; i < 5 - rating; i++) {
+      result.push(<i className="fa fa-star-o" key={i+5}></i>);
+    }
+    return result;
+  };
+
   render() {
     let { product } = this.props;
     return (
       <div className="col-lg-4 col-md-6 mb-r">
         <div className="card text-center card-cascade narrower">
           <div className="view overlay hm-white-slight z-depth-1">
-            <img src="https://store.storeimages.cdn-apple.com/4974/as-images.apple.com/is/image/AppleInc/aos/published/images/H/H0/HH0H2/HH0H2?wid=445&hei=445&fmt=jpeg&qlt=95&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=K7ik72"
-              className="img-fluid" alt="" />
+            <img src={product.image} className="img-fluid" alt={product.name} />
             <a>
               <div className="mask waves-light waves-effect waves-light"></div>
             </a>
@@ -20,29 +30,19 @@ class ProductItem extends Component {
               </strong>
             </h4>
             <ul className="rating">
-              <li>
-                <i className="fa fa-star"></i>
-              </li>
-              <li>
-                <i className="fa fa-star"></i>
-              </li>
-              <li>
-                <i className="fa fa-star"></i>
-              </li>
-              <li>
-                <i className="fa fa-star"></i>
-              </li>
-              <li>
-                <i className="fa fa-star"></i>
-              </li>
+              <li>{this.showRatings(product.rating)}</li>
             </ul>
-            <p className="card-text">
-              {product.description}
-            </p>
+            <p className="card-text">{product.description}</p>
             <div className="card-footer">
-              <span className="left">{product.price}</span>
+              <span className="left">{product.price}$</span>
               <span className="right">
-                <a className="btn-floating blue-gradient" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart">
+                <a
+                  className="btn-floating blue-gradient"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title=""
+                  data-original-title="Add to Cart"
+                >
                   <i className="fa fa-shopping-cart"></i>
                 </a>
               </span>

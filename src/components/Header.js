@@ -1,14 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Header extends Component {
   render() {
     return (
       <header>
-        <ul id="slide-out" className="side-nav hidden custom-scrollbar sn-bg-2 ps ps--theme_default" data-ps-id="c27390a3-9efc-e0d8-197a-ab96d73a156a">
+        <ul
+          id="slide-out"
+          className="side-nav hidden custom-scrollbar sn-bg-2 ps ps--theme_default"
+          data-ps-id="c27390a3-9efc-e0d8-197a-ab96d73a156a"
+        >
           <li>
             <div className="logo-wrapper waves-light waves-effect waves-light">
               <a>
-                <img src="http://mdbootstrap.com/img/logo/mdb-transparent.png" alt="" className="img-fluid flex-center" />
+                <img
+                  src="http://mdbootstrap.com/img/logo/mdb-transparent.png"
+                  alt=""
+                  className="img-fluid flex-center"
+                />
               </a>
             </div>
           </li>
@@ -39,28 +47,37 @@ class Header extends Component {
           <li>
             <form className="search-form" role="search">
               <div className="form-group waves-light waves-effect waves-light">
-                <input type="text" className="form-control" placeholder="Search" />
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Search"
+                />
               </div>
             </form>
           </li>
           <li>
-
             <ul className="collapsible collapsible-accordion">
               <li>
                 <a className="collapsible-header waves-effect arrow-r">
                   <i className="fa fa-shopping-bag"></i> Product Page
-                              <i className="fa fa-angle-down rotate-icon"></i>
+                  <i className="fa fa-angle-down rotate-icon"></i>
                 </a>
                 <div className="collapsible-body">
                   <ul>
                     <li>
-                      <a href="product.html" className="waves-effect">Product Page V.1</a>
+                      <a href="product.html" className="waves-effect">
+                        Product Page V.1
+                      </a>
                     </li>
                     <li>
-                      <a href="product-page.html" className="waves-effect">Product Page V.2</a>
+                      <a href="product-page.html" className="waves-effect">
+                        Product Page V.2
+                      </a>
                     </li>
                     <li>
-                      <a href="product-page-4.html" className="waves-effect">Product Page V.3</a>
+                      <a href="product-page-4.html" className="waves-effect">
+                        Product Page V.3
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -68,27 +85,39 @@ class Header extends Component {
               <li className="active">
                 <a className="collapsible-header waves-effect arrow-r active">
                   <i className="fa fa-shopping-cart"></i> Cart Pages
-                              <i className="fa fa-angle-down rotate-icon"></i>
+                  <i className="fa fa-angle-down rotate-icon"></i>
                 </a>
                 <div className="collapsible-body">
                   <ul>
                     <li>
-                      <a href="cart.html" className="waves-effect">Page with shopping cart</a>
+                      <a href="cart.html" className="waves-effect">
+                        Page with shopping cart
+                      </a>
                     </li>
                     <li>
-                      <a href="contact.html" className="waves-effect">Page with contact form</a>
+                      <a href="contact.html" className="waves-effect">
+                        Page with contact form
+                      </a>
                     </li>
                     <li>
-                      <a href="contact-2.html" className="waves-effect">Page with contact form V.2</a>
+                      <a href="contact-2.html" className="waves-effect">
+                        Page with contact form V.2
+                      </a>
                     </li>
                     <li>
-                      <a href="login.html" className="waves-effect">Page with sign in form</a>
+                      <a href="login.html" className="waves-effect">
+                        Page with sign in form
+                      </a>
                     </li>
                     <li>
-                      <a href="terms.html" className="waves-effect">Page with 'terms of use'</a>
+                      <a href="terms.html" className="waves-effect">
+                        Page with 'terms of use'
+                      </a>
                     </li>
                     <li>
-                      <a href="faq.html" className="waves-effect">Page with 'FAQ'</a>
+                      <a href="faq.html" className="waves-effect">
+                        Page with 'FAQ'
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -96,27 +125,48 @@ class Header extends Component {
               <li>
                 <a className="collapsible-header waves-effect arrow-r">
                   <i className="fa fa-dashboard"></i> Homepages
-                              <i className="fa fa-angle-down rotate-icon"></i>
+                  <i className="fa fa-angle-down rotate-icon"></i>
                 </a>
                 <div className="collapsible-body">
                   <ul>
                     <li>
-                      <a href="home-page.html" className="waves-effect">Ecommerce homepage default</a>
+                      <a href="home-page.html" className="waves-effect">
+                        Ecommerce homepage default
+                      </a>
                     </li>
                     <li>
-                      <a href="home-page-2.html" className="waves-effect">Ecommerce homepage full width</a>
+                      <a href="home-page-2.html" className="waves-effect">
+                        Ecommerce homepage full width
+                      </a>
                     </li>
                     <li>
-                      <a href="home-page-3-carousel.html" className="waves-effect">Ecommerce homepage V.3 Carousel</a>
+                      <a
+                        href="home-page-3-carousel.html"
+                        className="waves-effect"
+                      >
+                        Ecommerce homepage V.3 Carousel
+                      </a>
                     </li>
                     <li>
-                      <a href="home-page-3-full-page-carousel.html" className="waves-effect">Ecommerce homepage V.3 Full Page Carousel</a>
+                      <a
+                        href="home-page-3-full-page-carousel.html"
+                        className="waves-effect"
+                      >
+                        Ecommerce homepage V.3 Full Page Carousel
+                      </a>
                     </li>
                     <li>
-                      <a href="home-page-3-half-page-carousel.html" className="waves-effect">Ecommerce homepage V.3 Half Page Carousel</a>
+                      <a
+                        href="home-page-3-half-page-carousel.html"
+                        className="waves-effect"
+                      >
+                        Ecommerce homepage V.3 Half Page Carousel
+                      </a>
                     </li>
                     <li>
-                      <a href="home-page-4.html" className="waves-effect">Ecommerce homepage V.4</a>
+                      <a href="home-page-4.html" className="waves-effect">
+                        Ecommerce homepage V.4
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -124,24 +174,43 @@ class Header extends Component {
               <li>
                 <a className="collapsible-header waves-effect arrow-r">
                   <i className="fa fa-desktop"></i> Post Pages
-                              <i className="fa fa-angle-down rotate-icon"></i>
+                  <i className="fa fa-angle-down rotate-icon"></i>
                 </a>
                 <div className="collapsible-body">
                   <ul>
                     <li>
-                      <a href="post.html" className="waves-effect">Page with column on the right</a>
+                      <a href="post.html" className="waves-effect">
+                        Page with column on the right
+                      </a>
                     </li>
                     <li>
-                      <a href="blog-post-left-column.html" className="waves-effect">Page with newsletter on the left</a>
+                      <a
+                        href="blog-post-left-column.html"
+                        className="waves-effect"
+                      >
+                        Page with newsletter on the left
+                      </a>
                     </li>
                     <li>
-                      <a href="blog-post.html" className="waves-effect">Page with newsletter on the right</a>
+                      <a href="blog-post.html" className="waves-effect">
+                        Page with newsletter on the right
+                      </a>
                     </li>
                     <li>
-                      <a href="blog-post-full-width.html" className="waves-effect">Full width page with logged user</a>
+                      <a
+                        href="blog-post-full-width.html"
+                        className="waves-effect"
+                      >
+                        Full width page with logged user
+                      </a>
                     </li>
                     <li>
-                      <a href="blog-post-full-width%20not%20logged%20in%20user.html" className="waves-effect">Full width page with not logged user</a>
+                      <a
+                        href="blog-post-full-width%20not%20logged%20in%20user.html"
+                        className="waves-effect"
+                      >
+                        Full width page with not logged user
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -149,24 +218,49 @@ class Header extends Component {
               <li>
                 <a className="collapsible-header waves-effect arrow-r">
                   <i className="fa fa-diamond"></i> Category Pages
-                              <i className="fa fa-angle-down rotate-icon"></i>
+                  <i className="fa fa-angle-down rotate-icon"></i>
                 </a>
                 <div className="collapsible-body">
                   <ul>
                     <li>
-                      <a href="category-list-left-column.html" className="waves-effect">Category list with left column</a>
+                      <a
+                        href="category-list-left-column.html"
+                        className="waves-effect"
+                      >
+                        Category list with left column
+                      </a>
                     </li>
                     <li>
-                      <a href="category-list-right-column.html" className="waves-effect">Category list with right column</a>
+                      <a
+                        href="category-list-right-column.html"
+                        className="waves-effect"
+                      >
+                        Category list with right column
+                      </a>
                     </li>
                     <li>
-                      <a href="category-grid-left-column.html" className="waves-effect">Category grid with left column</a>
+                      <a
+                        href="category-grid-left-column.html"
+                        className="waves-effect"
+                      >
+                        Category grid with left column
+                      </a>
                     </li>
                     <li>
-                      <a href="category-right-column.html" className="waves-effect">Category grid with right column</a>
+                      <a
+                        href="category-right-column.html"
+                        className="waves-effect"
+                      >
+                        Category grid with right column
+                      </a>
                     </li>
                     <li>
-                      <a href="category-grid-left-column-carousel.html" className="waves-effect">Category grid with left column carousel</a>
+                      <a
+                        href="category-grid-left-column-carousel.html"
+                        className="waves-effect"
+                      >
+                        Category grid with left column carousel
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -196,13 +290,52 @@ class Header extends Component {
           </div>
           <ul className="nav navbar-nav nav-flex-icons ml-auto">
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle waves-effect waves-light" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-                <i className="fa fa-user"></i> Tài Khoản</a>
-              <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-                <a className="dropdown-item waves-effect waves-light">Đăng Ký</a>
-                <a className="dropdown-item waves-effect waves-light">Đăng Nhập</a>
-                <a className="dropdown-item waves-effect waves-light">Đăng Xuất</a>
+              <a
+                className="nav-link dropdown-toggle waves-effect waves-light"
+                id="dropdownMenu1"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i className="fa fa-globe"></i>
+              </a>
+              <div
+                className="dropdown-menu dropdown-menu-right"
+                aria-labelledby="dropdownMenu1"
+              >
+                <a className="dropdown-item waves-effect waves-light">
+                  English <i className="fa fa-check float-right"></i>
+                </a>
+                <a className="dropdown-item waves-effect waves-light">
+                  Việt Nam
+                </a>
+              </div>
+            </li>
+          </ul>
+          <ul className="nav navbar-nav nav-flex-icons">
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle waves-effect waves-light"
+                id="dropdownMenu1"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i className="fa fa-user"></i> Tài Khoản
+              </a>
+              <div
+                className="dropdown-menu dropdown-menu-right"
+                aria-labelledby="dropdownMenu1"
+              >
+                <a className="dropdown-item waves-effect waves-light">
+                  Đăng Ký
+                </a>
+                <a className="dropdown-item waves-effect waves-light">
+                  Đăng Nhập
+                </a>
+                <a className="dropdown-item waves-effect waves-light">
+                  Đăng Xuất
+                </a>
               </div>
             </li>
           </ul>

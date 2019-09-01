@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 import Header from './components/Header';
 import ProductsContainer from './containers/ProductsContainer';
 import Message from './components/Message';
@@ -9,6 +9,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Suspense fallback={(<div>Loading...</div>)}>
         <Header />
         <main id="mainContainer">
           <div className="container">
@@ -18,6 +19,7 @@ class App extends Component {
           </div>
         </main>
         <Footer />
+        </Suspense>
       </div>
     );
   }

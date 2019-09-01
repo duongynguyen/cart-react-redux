@@ -1,6 +1,24 @@
 import React, { Component } from "react";
 
+import { withTranslation } from "react-i18next";
+
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    props.i18n.changeLanguage("en");
+    this.state = {
+      language: "en"
+    };
+  }
+
+  changeLanguage = language => {
+    const { i18n } = this.props;
+    this.setState({
+      language
+    });
+    i18n.changeLanguage(language);
+  };
+
   render() {
     return (
       <header>
@@ -303,11 +321,23 @@ class Header extends Component {
                 className="dropdown-menu dropdown-menu-right"
                 aria-labelledby="dropdownMenu1"
               >
-                <a className="dropdown-item waves-effect waves-light">
-                  English <i className="fa fa-check float-right"></i>
+                <a
+                  className="dropdown-item waves-effect waves-light"
+                  onClick={() => this.changeLanguage("en")}
+                >
+                  English{" "}
+                  {this.state.language === "en" ? (
+                    <i className="fa fa-check float-right"></i>
+                  ) : null}
                 </a>
-                <a className="dropdown-item waves-effect waves-light">
-                  Việt Nam
+                <a
+                  className="dropdown-item waves-effect waves-light"
+                  onClick={() => this.changeLanguage("vn")}
+                >
+                  Việt Nam{" "}
+                  {this.state.language === "vn" ? (
+                    <i className="fa fa-check float-right"></i>
+                  ) : null}
                 </a>
               </div>
             </li>
@@ -345,4 +375,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default withTranslation()(Header);

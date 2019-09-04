@@ -20,6 +20,7 @@ class Header extends Component {
   };
 
   render() {
+    const { t } = this.props;
     return (
       <header>
         <ul
@@ -302,7 +303,7 @@ class Header extends Component {
           <div className="breadcrumb-dn mr-auto">
             <ol className="breadcrumb header-breadcrumb">
               <li className="breadcrumb-item">
-                <a>Trang Chủ</a>
+                <a>{t("navbar.home")}</a>
               </li>
             </ol>
           </div>
@@ -334,7 +335,7 @@ class Header extends Component {
                   className="dropdown-item waves-effect waves-light"
                   onClick={() => this.changeLanguage("vn")}
                 >
-                  Việt Nam{" "}
+                  Vietnamese{" "}
                   {this.state.language === "vn" ? (
                     <i className="fa fa-check float-right"></i>
                   ) : null}
@@ -351,20 +352,20 @@ class Header extends Component {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                <i className="fa fa-user"></i> Tài Khoản
+                <i className="fa fa-user"></i> {t("navbar.account")}
               </a>
               <div
                 className="dropdown-menu dropdown-menu-right"
                 aria-labelledby="dropdownMenu1"
               >
                 <a className="dropdown-item waves-effect waves-light">
-                  Đăng Ký
+                  {t("navbar.register")}
                 </a>
                 <a className="dropdown-item waves-effect waves-light">
-                  Đăng Nhập
+                  {t("navbar.login")}
                 </a>
                 <a className="dropdown-item waves-effect waves-light">
-                  Đăng Xuất
+                  {t("navbar.logout")}
                 </a>
               </div>
             </li>

@@ -4,6 +4,13 @@
     "part1": "321312",
     "part2": "32132"
   },
+  "navbar": {
+    "home": "Trang Chủ",
+    "account": "Tài Khoản",
+    "register": "Đăng Ký",
+    "login": "Đăng Nhập",
+    "logout": "Đăng Xuất"
+  },
   "products": {
     "title": "Danh Sách Sản Phẩm"
   }

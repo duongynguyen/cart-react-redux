@@ -4,6 +4,13 @@
     "part1": "dsadsadas",
     "part2": "dsadasds"
   },
+  "navbar": {
+    "home": "Home",
+    "account": "Account",
+    "register": "Register",
+    "login": "Login",
+    "logout": "Logout"
+  },
   "products": {
     "title": "List Of Products"
   }

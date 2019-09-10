@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { MSG_ADD_TO_CART_SUCCESS } from "../constants/Messages";
 
 class ProductItem extends Component {
   showRatings = rating => {
@@ -7,14 +8,14 @@ class ProductItem extends Component {
       result.push(<i className="fa fa-star" key={i}></i>);
     }
     for (let i = 0; i < 5 - rating; i++) {
-      result.push(<i className="fa fa-star-o" key={i+5}></i>);
+      result.push(<i className="fa fa-star-o" key={i+rating}></i>);
     }
     return result;
   };
 
   onAddToCart = product => {
-    console.log('[item]', product)
     this.props.onAddToCart(product);
+    this.props.onChangeMessage(MSG_ADD_TO_CART_SUCCESS);
   }
 
   render() {

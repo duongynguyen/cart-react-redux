@@ -8,7 +8,11 @@ import * as Messages from "../constants/Messages";
 
 class CartContainer extends Component {
   showCartItem = cart => {
-    let result = Messages.MSG_CART_EMPTY;
+    let result = (
+      <tr>
+        <td>{Messages.MSG_CART_EMPTY}</td>
+      </tr>
+    );
     if (cart.length > 0) {
       result = cart.map((item, index) => (
         <CartItem key={item.product.id} item={item} index={index} />
@@ -25,7 +29,7 @@ class CartContainer extends Component {
       }
     }
 
-    return <CartResult total={result}/>;
+    return <CartResult total={result} />;
   };
 
   render() {

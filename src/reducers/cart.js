@@ -1,41 +1,38 @@
-import * as types from "../constants/ActionType";
+import * as Types from "../constants/ActionType";
 
 const data = JSON.parse(localStorage.getItem("CART"));
 
-const initialState = [
-  {
-    product: {
-      id: 1,
-      name: "Iphone XS Max",
-      description: "Sản phẩm do Apple sản xuất",
-      image:
-        "https://cdn.tgdd.vn/Products/Images/42/190321/iphone-xs-max-gold-400x460.png",
-      price: 500,
-      inventory: 10,
-      rating: 4
-    },
-    quantity: 5
-  },
-  {
-    product: {
-      id: 3,
-      name: "Xiaomi Mi 9 SE",
-      description: "Sản phẩm do Xiaomi sản xuất",
-      image:
-        "https://cdn.tgdd.vn/Products/Images/42/198394/xiaomi-mi-9-se-blue-18thangbh-400x460.png",
-      price: 100,
-      inventory: 5,
-      rating: 3
-    },
-    quantity: 3
+const initialState = data ? data : [];
+
+const findProductInCart = (cart, product) => {
+  let index = -1;
+
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].product.id === product.id) {
+      index = i;
+      break;
+    }
   }
-];
+
+  return index;
+};
 
 export default (state = initialState, action) => {
+  const { product, quantity } = action;
+
   switch (action.type) {
-    case types.ADD_TO_CART:
-      console.log("[cartReducer] : ", action);
-      return state;
+    case Types.ADD_TO_CART:
+      const index = findProductInCart(state, product);
+      if (index !== -1) {
+        state[index].quantity += 1;
+      } else {
+        state.push({
+          product,
+          quantity
+        });
+      }
+      localStorage.setItem('CART', JSON.stringify(state));
+      return [...state];
     default:
       return state;
   }

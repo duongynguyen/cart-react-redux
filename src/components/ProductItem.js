@@ -12,6 +12,11 @@ class ProductItem extends Component {
     return result;
   };
 
+  onAddToCart = product => {
+    console.log('[item]', product)
+    this.props.onAddToCart(product);
+  }
+
   render() {
     let { product } = this.props;
     return (
@@ -42,6 +47,7 @@ class ProductItem extends Component {
                   data-placement="top"
                   title=""
                   data-original-title="Add to Cart"
+                  onClick={() => this.onAddToCart(product)}
                 >
                   <i className="fa fa-shopping-cart"></i>
                 </a>
